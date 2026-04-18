@@ -3,7 +3,7 @@
 ## What to do next (for the current MVP PRs)
 
 1. Check current open PRs and make sure implementation work is not duplicated.
-2. If an existing coding-agent PR is still queued/in-progress, add notes/docs only (this file + README updates), then wait for that PR to finish.
+2. If an existing automated implementation PR is still queued/in-progress, add notes/docs only (this file + README updates), then wait for that PR to finish.
 3. Ensure every feature PR targets `main` as the base branch.
 
 ## Verify PR status and base branch
@@ -12,8 +12,8 @@
 - Optional with GitHub CLI:
 
 ```bash
-gh pr list --repo Horizonll/cli
-gh pr view <PR_NUMBER> --repo Horizonll/cli --json baseRefName,headRefName,state,url
+gh pr list
+gh pr view <PR_NUMBER> --json baseRefName,headRefName,state,url
 ```
 
 Expected: `baseRefName` is `main`.
@@ -35,7 +35,7 @@ repro shell
 # run a few commands in the subshell, then exit
 
 # pack the latest session
-repro pack --out ./repro-last.zip --sanitize balanced --minimal=true
+repro pack --out ./repro-last.zip --sanitize balanced --minimal true
 unzip -l ./repro-last.zip
 
 # print issue markdown
