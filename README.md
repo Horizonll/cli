@@ -48,3 +48,11 @@ Sanitization is enabled by default (`balanced`) and includes:
 - Common `token/password/apikey/secret` key-value patterns
 
 A `sanitize_report.json` file is emitted for auditability. Always review generated output before sharing.
+
+## Development and release
+
+See `CONTRIBUTING.md` for:
+
+- how to verify active PR/task status and confirm base branch is `main`
+- local validation commands (`go test`, `go install`, `repro shell/pack/issue`)
+- release tagging and GoReleaser workflow verification steps
